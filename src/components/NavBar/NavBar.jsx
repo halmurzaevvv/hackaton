@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react"
 import { Navbar, Container, Nav } from "react-bootstrap"
+import { Link } from "react-router-dom"
 import logo from "../../assets/img/logo.svg"
-// import navIcon1 from "../../assets/img/nav-icon1.svg"
-// import navIcon2 from "../../assets/img/nav-icon2.svg"
-// import navIcon3 from "../../assets/img/nav-icon3.svg"
 import "./NavBar.css"
 
 export const NavBar = () => {
@@ -24,9 +22,14 @@ export const NavBar = () => {
 		return () => window.removeEventListener("scroll", onScroll)
 	})
 
-	// const onUpdateActiveLink = (value) => {
-	// 	setActiveLink(value)
-	// }
+	const pages = [
+		{ name: "HOME", link: "/about", id: 1 },
+		{ name: "MAKE", link: "/contacts", id: 2 },
+		{ name: "MENU", link: "/menu", id: 3 },
+		{ name: "REVIEWS", link: "/reviews", id: 4 },
+		{ name: "DELIVERY", link: "/delivery", id: 5 },
+		{ name: "CONTACTS", link: "/contacts", id: 6 },
+	]
 
 	return (
 		<Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
@@ -80,22 +83,6 @@ export const NavBar = () => {
 							Contacts
 						</Nav.Link>
 					</Nav>
-					{/* <span className="navbar-text">
-						<div className="social-icon">
-							<a href="#">
-								<img src={navIcon1} alt="" />{" "}
-							</a>
-							<a href="#">
-								<img src={navIcon2} alt="" />{" "}
-							</a>
-							<a href="#">
-								<img src={navIcon3} alt="" />{" "}
-							</a>
-						</div>
-						<button className="vvd" onClick={() => console.log("connect")}>
-							<span>Let's connect</span>
-						</button>
-					</span> */}
 				</Navbar.Collapse>
 			</Container>
 		</Navbar>

@@ -13,8 +13,8 @@ function reducer(state = INIT_STATE, action) {
     switch (action.type) {
         case "GET_PRODUCTS":
             return { ...state, products: action.payload };
-            default:
-                state;
+        default:
+            return state;
     };
 };
 
@@ -29,7 +29,7 @@ const ProductContextProvider = ({ children }) => {
         };
     };
 
-    const getProd = async () => {
+    const getProd = async (id) => {
         try {
             let res = await axios.get(`${API}/${id}`);
             dispatch({
@@ -40,7 +40,7 @@ const ProductContextProvider = ({ children }) => {
 
         };
     };
-    
+
     const getProdDetails = async (id) => {
         const res = await axios.get(`${API}/${id}`);
         dispatch({
@@ -50,14 +50,14 @@ const ProductContextProvider = ({ children }) => {
     };
 
     return (
-        <productContext.Provider 
-        value={{
-            products: state.products,
-            productDetails: state.productDetails,
-            addProd,
-            getProd,
-            getProdDetails,
-        }}
+        <productContext.Provider
+            value={{
+                products: state.products,
+                productDetails: state.productDetails,
+                addProd,
+                getProd,
+                getProdDetails,
+            }}
         >
             {children}
         </productContext.Provider>
