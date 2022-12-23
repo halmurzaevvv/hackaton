@@ -1,0 +1,8 @@
+.img-list {
+	width: 100%;
+	/* background: url("../../assets/img/background-img.jpg") 0 0/100% 100% no-repeat; */
+	padding: 260px 0 100px 0;
+	background-position: top center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
