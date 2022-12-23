@@ -1,0 +1,56 @@
+.footer {
+	width: 100%;
+	background: url("../../assets/img/footer-banner.jpg") 0 0/100% 100% no-repeat;
+	padding: 150px 0 100px 0;
+	background-position: top center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.center-footer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.block-footer {
+	width: 90%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer-title {
+	font-size: 48px;
+	font-weight: 700;
+}
+
+.footer-descr {
+	width: 70%;
+}
+
+.footer-icon {
+	width: 70px;
+}
+
+.footer-contact {
+	font-size: 30px;
+	font-weight: 700;
+	text-decoration: underline;
+}
+
+.footer-mail {
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.footer-bottom {
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.footers {
+	padding: 20px 0px;
+}
