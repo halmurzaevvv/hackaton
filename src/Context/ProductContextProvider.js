@@ -6,6 +6,7 @@ export const productContext = createContext();
 
 const INIT_STATE = {
     products: [],
+    productDetails: {},
 };
 
 function reducer(state = INIT_STATE, action) {
@@ -39,11 +40,23 @@ const ProductContextProvider = ({ children }) => {
 
         };
     };
+    
+    const getProdDetails = async (id) => {
+        const res = await axios.get(`${API}/${id}`);
+        dispatch({
+            type: "GET_PRODUCT_DETAILS",
+            payload: res.data,
+        });
+    };
+
     return (
         <productContext.Provider 
         value={{
+            products: state.products,
+            productDetails: state.productDetails,
             addProd,
             getProd,
+            getProdDetails,
         }}
         >
             {children}
