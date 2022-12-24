@@ -4,6 +4,13 @@
       "id": 1,
       "title": "json-server",
       "author": "typicode"
+    },
+    {
+      "title": "werwefef",
+      "price": 4234234,
+      "img": "wefwef",
+      "type": "ergerger",
+      "id": 2
     }
   ]
 }
