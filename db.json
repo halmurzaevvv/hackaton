@@ -1,16 +1,53 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    },
-    {
-      "title": "werwefef",
-      "price": 4234234,
-      "img": "wefwef",
-      "type": "ergerger",
-      "id": 2
-    }
-  ]
+	"posts": [
+		{
+			"title": "1233213",
+			"price": 2313,
+			"img": "wqe2",
+			"type": "ewqe",
+			"id": 1
+		},
+		{
+			"title": "13123312",
+			"price": 123,
+			"img": "123",
+			"type": "123",
+			"id": 2
+		},
+		{
+			"title": "13123312",
+			"price": 123,
+			"img": "123",
+			"type": "123",
+			"id": 3
+		},
+		{
+			"title": "ййййййй",
+			"price": 123,
+			"img": "123",
+			"type": "123",
+			"id": 4
+		},
+		{
+			"title": "13123312",
+			"price": 123,
+			"img": "123",
+			"type": "123",
+			"id": 5
+		},
+		{
+			"title": "13123312",
+			"price": 123,
+			"img": "123",
+			"type": "123",
+			"id": 6
+		},
+		{
+			"title": "выфвыфвф",
+			"price": 123,
+			"img": "123",
+			"type": "123",
+			"id": 7
+		}
+	]
 }

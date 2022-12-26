@@ -44,7 +44,7 @@ export const NavBar = () => {
 	const pages = [
 		{ name: "Home", link: "/home", id: 1 },
 		{ name: "How we make pizza", link: "/make", id: 2 },
-		{ name: "Menu", link: "/menu", id: 3 },
+		{ name: "Menu", link: "/products", id: 3 },
 		{ name: "Reviews", link: "/reviews", id: 4 },
 		{ name: "Delivery", link: "/delivery", id: 5 },
 		{ name: "Contacts", link: "/contacts", id: 6 },
