@@ -1,7 +1,7 @@
 import { MenuItem, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import logo from "../../assets/img/logo.svg";
 import "./NavBar.css";
 
@@ -50,6 +50,28 @@ export const NavBar = () => {
     { name: "Contacts", link: "/contacts", id: 6 },
   ];
 
+  const navigate = useNavigate();
+
+  function goToMenu() {
+    navigate("/menu");
+  }
+
+  function goToMake() {
+    navigate("/make");
+  }
+
+  function goToReviews() {
+    navigate("/reviews");
+  }
+
+  function goToDelivery() {
+    navigate("/delivery");
+  }
+
+  function goToContacts() {
+    navigate("/contacts");
+  }
+
   return (
     <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
       <Container>
@@ -64,16 +86,18 @@ export const NavBar = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link
-              to="/make"
+              onClick={goToMake}
               className={
                 activeLink === "make" ? "active navbar-link" : "navbar-link"
               }
             >
               How we make pizza
             </Nav.Link>
+            <NavLink to="/menu"></NavLink>
             <Nav.Link
-              to="/menu"
-              href="#"
+              // to="/menu"
+              // href="/menu"
+              onClick={goToMenu}
               className={
                 activeLink === "menu" ? "active navbar-link" : "navbar-link"
               }
@@ -81,8 +105,9 @@ export const NavBar = () => {
               Menu
             </Nav.Link>
             <Nav.Link
-              to="/reviews"
-              href="#"
+              onClick={goToReviews}
+              // to="/reviews"
+              // href="#"
               className={
                 activeLink === "reviews" ? "active navbar-link" : "navbar-link"
               }
@@ -90,8 +115,9 @@ export const NavBar = () => {
               Reviews
             </Nav.Link>
             <Nav.Link
-              to="/delivery"
-              href="#"
+              onClick={goToDelivery}
+              // to="/delivery"
+              // href="#"
               className={
                 activeLink === "delivery" ? "active navbar-link" : "navbar-link"
               }
@@ -99,8 +125,9 @@ export const NavBar = () => {
               Delivery
             </Nav.Link>
             <Nav.Link
-              to="/contacts"
-              href="#"
+              onClick={goToContacts}
+              // to="/contacts"
+              // href="#"
               className={
                 activeLink === "contacts" ? "active navbar-link" : "navbar-link"
               }
