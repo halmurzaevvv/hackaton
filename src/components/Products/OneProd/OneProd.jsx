@@ -7,9 +7,9 @@ import Typography from "@mui/material/Typography"
 import { productContext } from "../../../Context/ProductContextProvider"
 import { useContext } from "react"
 import { useNavigate } from "react-router-dom"
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart"
 import { cartContext } from "../../../Context/CartContextProvider"
 import { IconButton } from "@mui/material"
+import ShoppingCartIcon from "@mui/icons-material"
 
 export default function OneProd({ item }) {
 	const { deleteProduct } = useContext(productContext)
