@@ -9,7 +9,8 @@ import { useContext } from "react"
 import { useNavigate } from "react-router-dom"
 import { cartContext } from "../../../Context/CartContextProvider"
 import { IconButton } from "@mui/material"
-import ShoppingCartIcon from "@mui/icons-material"
+// import ShoppingCartIcon from "@mui/icons-material/ShoppingCart"
+import {ShoppingCartIcon} from '@mui/icons-material';
 
 export default function OneProd({ item }) {
 	const { deleteProduct } = useContext(productContext)
