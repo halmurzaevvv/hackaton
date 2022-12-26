@@ -1,14 +1,31 @@
-import { useEffect, useState } from "react"
+import { MenuItem, Typography } from "@mui/material"
+import React, { useEffect, useState } from "react"
 import { Navbar, Container, Nav } from "react-bootstrap"
+import { Link, NavLink } from "react-router-dom"
 import logo from "../../assets/img/logo.svg"
-// import navIcon1 from "../../assets/img/nav-icon1.svg"
-// import navIcon2 from "../../assets/img/nav-icon2.svg"
-// import navIcon3 from "../../assets/img/nav-icon3.svg"
 import "./NavBar.css"
 
 export const NavBar = () => {
 	const [activeLink, setActiveLink] = useState("home")
 	const [scrolled, setScrolled] = useState(false)
+
+	const [anchorElNav, setAnchorElNav] = React.useState(null)
+	const [anchorElUser, setAnchorElUser] = React.useState(null)
+
+	const handleOpenNavMenu = (event) => {
+		setAnchorElNav(event.currentTarget)
+	}
+	const handleOpenUserMenu = (event) => {
+		setAnchorElUser(event.currentTarget)
+	}
+
+	const handleCloseNavMenu = () => {
+		setAnchorElNav(null)
+	}
+
+	const handleCloseUserMenu = () => {
+		setAnchorElUser(null)
+	}
 
 	useEffect(() => {
 		const onScroll = () => {
@@ -24,78 +41,73 @@ export const NavBar = () => {
 		return () => window.removeEventListener("scroll", onScroll)
 	})
 
-	// const onUpdateActiveLink = (value) => {
-	// 	setActiveLink(value)
-	// }
+	const pages = [
+		{ name: "Home", link: "/home", id: 1 },
+		{ name: "How we make pizza", link: "/make", id: 2 },
+		{ name: "Menu", link: "/products", id: 3 },
+		{ name: "Reviews", link: "/reviews", id: 4 },
+		{ name: "Delivery", link: "/delivery", id: 5 },
+		{ name: "Contacts", link: "/contacts", id: 6 },
+	]
 
 	return (
 		<Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
 			<Container>
-				<Navbar.Brand href="#home">
-					<img src={logo} alt="Logo" />
+				<Navbar.Brand>
+					<NavLink to="/">
+						<img src={logo} alt="Logo" />
+					</NavLink>
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav">
 					<span className="navbar-toggler-icon"></span>
 				</Navbar.Toggle>
 				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav className="me-auto">
-						<Nav.Link
-							href="#"
+						<NavLink
+							to="/make"
 							className={
 								activeLink === "make" ? "active navbar-link" : "navbar-link"
 							}
 						>
 							How we make pizza
-						</Nav.Link>
-						<Nav.Link
+						</NavLink>
+						<NavLink
+							to="/menu"
 							href="#"
 							className={
 								activeLink === "menu" ? "active navbar-link" : "navbar-link"
 							}
 						>
 							Menu
-						</Nav.Link>
-						<Nav.Link
+						</NavLink>
+						<NavLink
+							to="/reviews"
 							href="#"
 							className={
 								activeLink === "reviews" ? "active navbar-link" : "navbar-link"
 							}
 						>
 							Reviews
-						</Nav.Link>
-						<Nav.Link
+						</NavLink>
+						<NavLink
+							to="/delivery"
 							href="#"
 							className={
 								activeLink === "delivery" ? "active navbar-link" : "navbar-link"
 							}
 						>
 							Delivery
-						</Nav.Link>
-						<Nav.Link
+						</NavLink>
+						<NavLink
+							to="/contacts"
 							href="#"
 							className={
 								activeLink === "contacts" ? "active navbar-link" : "navbar-link"
 							}
 						>
 							Contacts
-						</Nav.Link>
+						</NavLink>
 					</Nav>
-					{/* <span className="navbar-text">
-						<div className="social-icon">
-							<a href="#">
-								<img src={navIcon1} alt="" />{" "}
-							</a>
-							<a href="#">
-								<img src={navIcon2} alt="" />{" "}
-							</a>
-							<a href="#">
-								<img src={navIcon3} alt="" />{" "}
-							</a>
-						</div>
-						<button className="vvd" onClick={() => console.log("connect")}>
-							<span>Let's connect</span>
-						</button>
-					</span> */}
 				</Navbar.Collapse>
 			</Container>
 		</Navbar>
