@@ -63,15 +63,15 @@ export const NavBar = () => {
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link
+            <NavLink
               to="/make"
               className={
                 activeLink === "make" ? "active navbar-link" : "navbar-link"
               }
             >
               How we make pizza
-            </Nav.Link>
-            <Nav.Link
+            </NavLink>
+            <NavLink
               to="/menu"
               href="#"
               className={
@@ -79,8 +79,8 @@ export const NavBar = () => {
               }
             >
               Menu
-            </Nav.Link>
-            <Nav.Link
+            </NavLink>
+            <NavLink
               to="/reviews"
               href="#"
               className={
@@ -88,8 +88,8 @@ export const NavBar = () => {
               }
             >
               Reviews
-            </Nav.Link>
-            <Nav.Link
+            </NavLink>
+            <NavLink
               to="/delivery"
               href="#"
               className={
@@ -97,8 +97,8 @@ export const NavBar = () => {
               }
             >
               Delivery
-            </Nav.Link>
-            <Nav.Link
+            </NavLink>
+            <NavLink
               to="/contacts"
               href="#"
               className={
@@ -106,7 +106,7 @@ export const NavBar = () => {
               }
             >
               Contacts
-            </Nav.Link>
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>
