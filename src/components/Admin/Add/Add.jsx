@@ -1,13 +1,11 @@
+import { Box, Button, TextField, Typography } from "@mui/material"
 import React, { useContext, useState } from "react"
+import { useNavigate } from "react-router-dom";
 import { productContext } from "../../../Context/ProductContextProvider"
-import Box from "@mui/material/Box"
-import TextField from "@mui/material/TextField"
-import { Button, Typography } from "@mui/material"
-import { useNavigate } from "react-router-dom"
 import "./Add.css"
 
 const Add = () => {
-	const { addProduct } = useContext(productContext)
+	const { addProd } = useContext(productContext)
 	const navigate = useNavigate()
 
 	const [product, setProduct] = useState({
@@ -68,7 +66,7 @@ const Add = () => {
 				/>
 				<Button
 					onClick={() => {
-						addProduct(product)
+						addProd(product)
 						navigate("/products")
 					}}
 					variant="outlined"

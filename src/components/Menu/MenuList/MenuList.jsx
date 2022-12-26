@@ -15,11 +15,12 @@ import {
 import React, { useContext, useEffect, useState } from "react"
 import { useSearchParams } from "react-router-dom"
 import { productContext } from "../../../Context/ProductContextProvider"
-import OneProd from "../OneProd/OneProd"
+import OneProd from "../../Products/OneProd/OneProd"
 import SearchIcon from "@mui/icons-material/Search"
-import "./ProdList.css"
+import "./MenuList.css"
+import OnePizza from "../OnePizza/OnePizza"
 
-const ProdList = () => {
+const MenuList = () => {
 	const { products, getProducts, fetchByParams } = useContext(productContext)
 
 	const [searchParams, setSearchParams] = useSearchParams()
@@ -68,7 +69,7 @@ const ProdList = () => {
 						>
 							{products ? (
 								currentData().map((item) => (
-									<OneProd item={item} key={item.id} />
+									<OnePizza item={item} key={item.id} />
 								))
 							) : (
 								<h2>Loading...</h2>
@@ -138,4 +139,4 @@ const ProdList = () => {
 	)
 }
 
-export default ProdList
+export default MenuList
