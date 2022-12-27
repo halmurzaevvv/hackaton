@@ -10,10 +10,11 @@
 }
 
 .pagination {
+	width: 400px;
 	background-color: aliceblue !important;
 	color: aliceblue !important;
 	padding: 10px;
-	border-radius: 2%;
+	border-radius: 10px;
 	display: flex;
 	justify-content: center;
 }

@@ -8,13 +8,12 @@ const Footer = () => {
 		<section className="footer">
 			<Container className="center-footer">
 				<Row className="block-footer" id="contacts">
-					<h1 className="footer-title footers">Ajdkajdl dkadopk</h1>
+					<h1 className="footer-title footers">Contact us</h1>
 					<h3 className="footer-descr footers">
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae
-						a, molestiae magni asperiores ullam officia velit dolorum non illo
-						aliquid.
+						We love our guests and are always happy to chat, subscribe to our
+						social networks and always stay up to date.
 					</h3>
-					<a href="">
+					<a href="/">
 						<img
 							className="footer-icon footers"
 							src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
@@ -25,7 +24,7 @@ const Footer = () => {
 					<p className="footers footer-contact">+996 995 444 111</p>
 					<p className="footers footer-mail ">onetwothree@gmail.com</p>
 					<p className="footers footer-bottom ">
-						Предложения к сотрудничеству рассматриваются исключительно по почте
+						Offers of cooperation will be considered exclusively by mail
 					</p>
 				</Row>
 			</Container>

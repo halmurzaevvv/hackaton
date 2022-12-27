@@ -5,88 +5,93 @@ const Make = () => {
 	return (
 		<div className="make">
 			<div className="make-block">
-				<h1>Небольшая экскурсия в Пиццерию</h1>
+				<h1>A little excursion to the Pizzeria</h1>
 				<img
 					src="https://sun9-67.userapi.com/impg/2WaQgf7JApiYUCz2DBiSOcQctY4vmEM7jAK9-g/MFKZFoXVUsQ.jpg?size=807x269&quality=95&sign=3401d0492f62711a9ef11eb01cffb658&type=album"
 					alt=""
 				/>
 				<p>
-					Добрый день! <br /> <br /> Мы не так активно рекламируемся, и каждый
-					раз когда у нас приходит значительное количество, новых людей, мы
-					делаем небольшой пост-знакомство.
-					<br /> <br />В таком посте мы постараемся ответить на САМЫЕ частые
-					вопросы, которые мы получаем на протяжении вот уже почти 3х лет. Не
-					ресторан. У нас есть посадочные места, но они общие, но рынок классный
-					, приходите!
-					<br /> <br />У нас есть дровяная печка.
+					Good afternoon! <br /> <br /> We don't advertise as much, and every
+					time we have a significant number of new people come in, we do a
+					little post introduction.
 					<br /> <br />
-					Да на настоящих дровах, мы их покупаем сухими(но иногда бывают
-					прострелы), они из березы, это важно! 🧐
+					In a post like this, we'll try to answer the MOST frequent questions
+					we've been getting for almost three years now. Don't restaurant. We
+					have seating, but it's shared, but the market is cool come on over!
+					<br /> <br />
+					We have a wood stove.
+					<br /> <br />
+					Yes on real firewood, we buy them dry (but sometimes there are slugs),
+					they are made of birch, it's important! 🧐
 					<br />
 					<br />
-					Леопардовая корочка-не сгорела, так надо, пицца готовится на открытом
-					огне(это тоже важно, не на углях) и это выгоревшие углеродные карманы.
+					Leopard crust-not burned, it has to be, the pizza is cooked on an open
+					fire(that's important too, not on coals) and it's burnt carbon
+					pockets.
 				</p>
 				<img
 					src="https://sun9-69.userapi.com/impg/yS8V2xxXh6FlMgRom8YsnnEiogchl17gnq9wGw/IX1fsN1GJFY.jpg?size=807x269&quality=95&sign=d4f3ed5b9a05c7e3b11c327d4f89eec3&type=album"
 					alt=""
 				/>
 				<p>
-					У нас не тонкое и не толстое тесто, мы готовим по технологии
-					неаполитанской пиццы, это пышный борт и тонкая тонкая серединка, с
-					очень сочной начинкой, потому что пицца в печке сидит не больше 2х
-					минут, и не успевает пересохнуть.
+					We don't have thin or thick dough, we're making Neapolitan pizza,
+					which is a puffy rim and a thin, thin crust in the middle, with very
+					juicy toppings, because the pizza doesn't sit in the oven for more
+					than two minutes and doesn't have time to dry out.
 				</p>
 				<img
 					src="https://sun9-37.userapi.com/impg/vWD6jcDlWFsHfjifPGhAK2V60C6g6SFDp3haTQ/xN2xyf7mbNU.jpg?size=807x269&quality=95&sign=172ee7f5bc107659d456d321d91a852a&type=album"
 					alt=""
 				/>
 				<p>
-					Наши пиццы могут быть не идеально круглыми, это ручная работа, и живое
-					тесто, и всякое может пойти не по идеальному сценарию, мы готовим без
-					костылей, и нам важен вкус и не вид. Это конечно же не значит, Что к
-					вам обязательно придут непонятные квадраты, мы просто стараемся
-					готовить более традиционно, без зацикливания на коммерческих
-					стандартах красоты.
+					Our pizzas may not be perfectly round, it's handmade, and live dough,
+					and things can go wrong with a perfect scenario, we cook without
+					crutches, and we care about the taste and not the look. That doesn't
+					mean, of course, that you're necessarily going to get obscure squares,
+					we're just trying to to cook more traditionally, without getting hung
+					up on commercial standards of beauty.
 					<br />
-					<br /> Мы очень любим свое дело, свой продукт, и знаем о нем все. Мы
-					постоянно ищем лучшие на вкус продукты и стараемся поддерживать в
-					наличии, те продукты, которые нашли раньше, хоть и не всегда это
-					легко. Для нас главное познакомить вас, с нашей едой. Мы можем
-					рассказать о ней абсолютно все, вы всегда можете задать вопрос, или
-					заехать в пиццерию поболтать.
+					<br /> We love our business, our product, and we know everything about
+					it. We We're always looking for the best tasting products, and we try
+					to keep products that we've found before, even though it's not always
+					easy. For us, the most important thing is to introduce you, to our
+					food. We can tell you about it absolutely everything, you can always
+					ask a question, or stop by the pizzeria for a chat.
 					<br /> <br />
-					Мы не всегда быстро ответим в ВК или IG, они не очень хорошо работают,
-					если вопрос срочный звоните по телефону. Телефон работает всегда с 11
-					до 21.
+					We don't always answer quickly in VK or IG, they don't work very well,
+					If your question is urgent call us by phone. The phone is always open
+					from 11 till 21.
 					<br />
 					<br />
-					Пиццерия работает с 11 до 21, возможно мы чуть позже сможем расширить
-					режим работы, но на текущий момент режим работы, совпадает с режимом
-					работы торгового центра. Будьте внимательны когда делаете заказ.
+					Pizzeria works from 11 to 21, maybe later we can expand the pizzeria
+					is open from 11:00 to 21:00, but at the moment it's the same as the
+					mall. of the mall. Be careful when ordering.
 					<br />
 					<br />
-					На текущий момент, мы принимаем заказы на доставку исключительно через
-					сайт (ссылка в описании). Заказы на самовывоз можно так же сделать
-					через сайт, или по телефону.
-					<br />
-					<br />У нас не бывает скидок, у нас отличные цены, мы сами считаем их
-					несколько низковатыми. Скидки обесценивают процесс, и в конце концов,
-					если нас выбирают только по наличию или отсутствию скидок, вероятно
-					это не наши клиенты.
-					<br />
-					<br />У нас много планов, мы стараемся решать трудности и неудобства
-					для наших клиентов, которые на текущий момент у нас есть, по мере
-					возможностей. Мы терпели 2 года пандемии, и быстро все к сожалению не
-					можем реализовать. Но можете быть уверены, мы вас еще удивим.
+					At the moment, we take orders for delivery only through site (link in
+					the description). Orders for pickup can also be done through the
+					website, or by phone.
 					<br />
 					<br />
-					Спасибо, что дочитали. Надеемся эта статья, ответит на ваши вопросы,
-					ну а на те что не ответит, вы нам обязательно напишите/позвоните мы
-					ответим и поможем.
+					We don't have any discounts, we have great prices, we consider them a
+					little low ourselves. Discounts devalue the process, and at the end of
+					the day, if we're only chosen based on the presence or absence of
+					discounts, it's probably they're not our customers.
 					<br />
 					<br />
-					Команда Пиццерии.
+					We have many plans, we try to solve the difficulties and
+					inconveniences for our customers that we have at the moment, as much
+					as possible. capabilities. We have endured 2 years of pandemic, and
+					quickly all unfortunately cannot can't implement everything fast
+					enough. But you can be sure, we will still surprise you.
+					<br />
+					<br />
+					Thank you for finishing this article. We hope this article will answer
+					your questions, Well, for those that do not answer, you will
+					definitely write / call us we answer and help.
+					<br />
+					<br />
+					The Pizzeria team.
 				</p>
 			</div>
 		</div>
