@@ -52,7 +52,8 @@ const Banner = () => {
 							{`Pizzeria Napoletana`}
 							<br />
 							<span className="wrap" style={{ fontSize: "40px" }}>
-								{text} <br />
+								{text}
+								<br />
 							</span>
 						</h1>
 						<p>Place your first order and get 10% off</p>

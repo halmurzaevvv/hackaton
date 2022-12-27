@@ -46,8 +46,7 @@ export const NavBar = () => {
 		{ name: "How we make pizza", link: "/make", id: 2 },
 		{ name: "Menu", link: "/menu", id: 3 },
 		{ name: "Reviews", link: "/reviews", id: 4 },
-		{ name: "Delivery", link: "/delivery", id: 5 },
-		{ name: "Contacts", link: "/contacts", id: 6 },
+		{ name: "Contacts", link: "/contacts", id: 5 },
 	]
 
 	const navigate = useNavigate()
@@ -64,9 +63,9 @@ export const NavBar = () => {
 		navigate("/reviews")
 	}
 
-	function goToDelivery() {
-		navigate("/delivery")
-	}
+	// function goToDelivery() {
+	// 	navigate("/delivery")
+	// }
 
 	function goToContacts() {
 		navigate("/contacts")
@@ -114,7 +113,7 @@ export const NavBar = () => {
 						>
 							Reviews
 						</Nav.Link>
-						<Nav.Link
+						{/* <Nav.Link
 							onClick={goToDelivery}
 							// to="/delivery"
 							// href="#"
@@ -123,7 +122,7 @@ export const NavBar = () => {
 							}
 						>
 							Delivery
-						</Nav.Link>
+						</Nav.Link> */}
 						<Nav.Link
 							onClick={goToContacts}
 							// to="/contacts"
