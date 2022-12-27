@@ -4,6 +4,7 @@ import Edit from "./components/Admin/Edit/Edit";
 import Cart from "./components/Cart/Cart";
 import Make from "./components/Make/Make";
 import MenuList from "./components/Menu/MenuList/MenuList";
+import OrderForm from "./components/OrderForm/OrderForm";
 import Reviews from "./components/Reviews/Reviews";
 import Admin from "./pages/Admin";
 import Home from "./pages/Home";
@@ -16,6 +17,7 @@ const PUBLIC_ROUTES = [
   { link: "/edit/:id", element: <Edit />, id: 5 },
   { link: "/cart", element: <Cart />, id: 6 },
   { link: "/menu", element: <MenuList />, id: 7 },
+  { link: "/order", element: <OrderForm />, id: 10 },
   { link: "/reviews", element: <Reviews />, id: 8 },
   { link: "/make", element: <Make />, id: 9 },
 ];
