@@ -1,8 +1,19 @@
 .prod-list {
 	width: 100%;
 	/* background: url("../../assets/img/background-img.jpg") 0 0 / cover no-repeat; */
-	padding: 150px 0 90px 0;
-	background-position: top center;
+	padding: 100px 0 90px 0;
+	/* background-position: top center;
 	background-size: cover;
-	background-repeat: no-repeat;
+	background-repeat: no-repeat; */
+	display: flex;
+	justify-content: center;
+}
+
+.pagination {
+	background-color: aliceblue !important;
+	color: aliceblue !important;
+	padding: 10px;
+	border-radius: 2%;
+	display: flex;
+	justify-content: center;
 }

@@ -16,6 +16,7 @@ function App() {
           <MyRoutes />
         </ProductContextProvider>
       </CartContextProvider>
+
     </div>
   );
 }

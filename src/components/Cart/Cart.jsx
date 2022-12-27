@@ -11,7 +11,6 @@ import Paper from "@mui/material/Paper";
 import { cartContext } from "../../Context/CartContextProvider";
 import { Button } from "@mui/material";
 import "./Cart.css";
-import OrderForm from "../OrderForm/OrderForm";
 import { useNavigate } from "react-router-dom";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -50,9 +49,14 @@ export default function Cart() {
   };
 
   console.log(cart);
+
   return (
     <TableContainer component={Paper} className="cart-block">
-      <Table sx={{ minWidth: 700 }} aria-label="customized table">
+      <Table
+        sx={{ maxWidth: 1000 }}
+        aria-label="customized table"
+        className="cart-bg"
+      >
         <TableHead>
           <TableRow>
             <StyledTableCell align="right">Image</StyledTableCell>
@@ -94,7 +98,6 @@ export default function Cart() {
           ))}
         </TableBody>
       </Table>
-
       <Button onClick={() => navigate("/order")}>
         BUY NOW {cart?.totalPrice} $
       </Button>

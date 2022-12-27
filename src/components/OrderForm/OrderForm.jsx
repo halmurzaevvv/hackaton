@@ -5,7 +5,6 @@ import "react-credit-cards/es/styles-compiled.css";
 import { useNavigate } from "react-router-dom";
 import "./OrderForm.css";
 import { cartContext } from "../../Context/CartContextProvider";
-// import { calcTotalPrice } from "../../helpers/const";
 
 const OrderForm = () => {
   const [closed, setClosed] = useState(false);
@@ -17,8 +16,6 @@ const OrderForm = () => {
   const [expiry, SetExpiry] = useState("");
   const [cvc, SetCvc] = useState("");
   const [focus, SetFocus] = useState("");
-
-  //totalPrice = calcTotalPrice();
 
   const { getCart, cart, changeProductCount, deleteCartProduct } =
     useContext(cartContext);
@@ -55,7 +52,6 @@ const OrderForm = () => {
     <>
       <div className="paymentcard">
         <div className={closed ? "none" : "rccs__card backcolor"}>
-          {/* <h5 className="text-h5">Total price to be payed: {totalPrice}$</h5> */}
           <div className="rccs__card rccs__card--unknown">
             <Cards
               number={number}

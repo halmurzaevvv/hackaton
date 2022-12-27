@@ -33,12 +33,13 @@ export default function OneProd({ item }) {
 				<Typography gutterBottom variant="h5" component="div">
 					{item.title}
 				</Typography>
-				<Typography gutterBottom variant="h5" component="div">
+				<Typography gutterBottom variant="body2" component="div">
 					{item.type}
 				</Typography>
-				<Typography variant="body2" color="text.secondary">
-					{item.price}
+				<Typography variant="body3" color="text.secondary">
+					{item.desc}
 				</Typography>
+				<Typography variant="h5">{item.price}</Typography>
 			</CardContent>
 			<CardActions>
 				<Button size="small" onClick={() => deleteProduct(item.id)}>

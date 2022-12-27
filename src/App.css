@@ -1,3 +1,20 @@
+/************ Custom Font ************/
+@font-face {
+	font-family: Centra;
+	src: url("./assets/font/CentraNo2-Bold.ttf");
+	font-weight: 700;
+}
+@font-face {
+	font-family: Centra;
+	src: url("./assets/font/CentraNo2-Medium.ttf");
+	font-weight: 500;
+}
+@font-face {
+	font-family: Centra;
+	src: url("./assets/font/CentraNo2-Book.ttf");
+	font-weight: 400;
+}
+
 /************ Default Css ************/
 * {
 	margin: 0;
@@ -79,8 +96,5 @@ p.danger {
 .App {
 	width: 100%;
 	background: url("./assets/img/banner2.jpg") repeat-y;
-	/* padding: 260px 0 100px 0;
-	background-position: top center;
-	background-size: cover;
-	background-repeat: no-repeat; */
+	/* background-image: url(./assets/img/Clover1.svg); */
 }
