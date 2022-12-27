@@ -48,7 +48,11 @@ export default function Cart() {
 	console.log(cart)
 	return (
 		<TableContainer component={Paper} className="cart-block">
-			<Table sx={{ minWidth: 700 }} aria-label="customized table">
+			<Table
+				sx={{ maxWidth: 1000 }}
+				aria-label="customized table"
+				className="cart-bg"
+			>
 				<TableHead>
 					<TableRow>
 						<StyledTableCell align="right">Image</StyledTableCell>
@@ -90,7 +94,6 @@ export default function Cart() {
 					))}
 				</TableBody>
 			</Table>
-
 			<Button onClick={cartCleaner}>BUY NOW {cart?.totalPrice} $</Button>
 		</TableContainer>
 	)
