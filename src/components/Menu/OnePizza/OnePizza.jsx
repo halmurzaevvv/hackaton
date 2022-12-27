@@ -8,6 +8,7 @@ import { productContext } from "../../../Context/ProductContextProvider";
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+
 import { cartContext } from "../../../Context/CartContextProvider";
 import { IconButton } from "@mui/material";
 import "./OnePizza.css";
@@ -62,7 +63,7 @@ export default function OnePizza({ item }) {
         </Button>
       </CardActions>
       <CardActions className="cart-action2">
-        <div className="counter-unput">
+        {/* <div className="counter-unput">
           <div className="input-group">
             <div class="input-group-prepend">
               <button
@@ -89,7 +90,7 @@ export default function OnePizza({ item }) {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
         <Button className="buy" variant="outlined">
           Text
         </Button>

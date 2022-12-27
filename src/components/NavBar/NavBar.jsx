@@ -1,9 +1,10 @@
-import { MenuItem, Typography } from "@mui/material";
+import { Badge, Button, MenuItem, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import logo from "../../assets/img/logo.svg";
 import "./NavBar.css";
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -48,7 +49,34 @@ export const NavBar = () => {
     { name: "Reviews", link: "/reviews", id: 4 },
     { name: "Delivery", link: "/delivery", id: 5 },
     { name: "Contacts", link: "/contacts", id: 6 },
+    { name: "Cart", link: "/cart", id: 7 },
   ];
+
+  const navigate = useNavigate();
+
+  function goToMenu() {
+    navigate("/menu");
+  }
+
+  function goToMake() {
+    navigate("/make");
+  }
+
+  function goToReviews() {
+    navigate("/reviews");
+  }
+
+  function goToDelivery() {
+    navigate("/delivery");
+  }
+
+  function goToContacts() {
+    navigate("/contacts");
+  }
+
+  function goToCart() {
+    navigate("/cart");
+  }
 
   return (
     <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
@@ -63,50 +91,55 @@ export const NavBar = () => {
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <NavLink
-              to="/make"
+            <Nav.Link
+              onClick={goToMake}
               className={
                 activeLink === "make" ? "active navbar-link" : "navbar-link"
               }
             >
               How we make pizza
-            </NavLink>
-            <NavLink
-              to="/menu"
-              href="#"
+            </Nav.Link>
+            <NavLink to="/menu"></NavLink>
+            <Nav.Link
+              onClick={goToMenu}
               className={
                 activeLink === "menu" ? "active navbar-link" : "navbar-link"
               }
             >
               Menu
-            </NavLink>
-            <NavLink
-              to="/reviews"
-              href="#"
+            </Nav.Link>
+            <Nav.Link
+              onClick={goToReviews}
               className={
                 activeLink === "reviews" ? "active navbar-link" : "navbar-link"
               }
             >
               Reviews
-            </NavLink>
-            <NavLink
-              to="/delivery"
-              href="#"
+            </Nav.Link>
+            <Nav.Link
+              onClick={goToDelivery}
               className={
                 activeLink === "delivery" ? "active navbar-link" : "navbar-link"
               }
             >
               Delivery
-            </NavLink>
-            <NavLink
-              to="/contacts"
-              href="#"
+            </Nav.Link>
+            <Nav.Link
+              onClick={goToContacts}
               className={
                 activeLink === "contacts" ? "active navbar-link" : "navbar-link"
               }
             >
               Contacts
-            </NavLink>
+            </Nav.Link>
+            <Nav.Link
+            onClick={goToCart}>
+                <Button sx={{ my: -1, color: "#fff" }}>
+                  <Badge>
+                    <ShoppingCartIcon />
+                  </Badge>
+                </Button>
+                </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
