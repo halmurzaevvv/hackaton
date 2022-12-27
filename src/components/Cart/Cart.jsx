@@ -26,7 +26,6 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 	"&:nth-of-type(odd)": {
 		backgroundColor: theme.palette.action.hover,
 	},
-	// hide last border
 	"&:last-child td, &:last-child th": {
 		border: 0,
 	},
@@ -45,7 +44,6 @@ export default function Cart() {
 		getCart()
 	}
 
-	console.log(cart)
 	return (
 		<TableContainer component={Paper} className="cart-block">
 			<Table

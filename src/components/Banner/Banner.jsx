@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { Col, Container, Row } from "react-bootstrap"
 import { ArrowRightCircle } from "react-bootstrap-icons"
+import { useNavigate } from "react-router-dom"
 // import headerImg from "../../assets/img/header-img.svg"
 import "./Banner.css"
 
@@ -43,6 +44,16 @@ const Banner = () => {
 		}
 	}
 
+	const pages = [
+		{ name: "Cart", link: "/cart", id: 7 },
+	  ];
+
+	  const navigate = useNavigate();
+
+	  function goToMenu() {
+		navigate("/menu");
+	  }
+
 	return (
 		<section className="banner" id="home">
 			<Container>
@@ -58,7 +69,7 @@ const Banner = () => {
 						</h1>
 						<p>Place your first order and get 10% off</p>
 						<span className="tagline">PIZZERIA OPEN FROM 11 TO 21 HOURS</span>
-						<button onClick={() => console.log("connect")}>
+						<button onClick={() => goToMenu()}>
 							ORDER <ArrowRightCircle size={25} />
 						</button>
 					</Col>
