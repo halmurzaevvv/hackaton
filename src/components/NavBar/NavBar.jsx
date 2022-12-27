@@ -2,7 +2,7 @@ import { Badge, Button } from "@mui/material"
 import React, { useEffect, useState } from "react"
 import { Navbar, Container, Nav } from "react-bootstrap"
 import { Link, NavLink, useNavigate } from "react-router-dom"
-import logo from "../../assets/img/logo.svg"
+import logo from "../../assets/img/logo-pizza.png"
 import "./NavBar.css"
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart"
 
@@ -195,7 +195,8 @@ export const NavBar = () => {
 							Delivery
 						</Nav.Link> */}
 						<Nav.Link
-							onClick={goToContacts}
+							href="#contacts"
+							// onClick={goToContacts}
 							className={
 								activeLink === "contacts" ? "active navbar-link" : "navbar-link"
 							}
