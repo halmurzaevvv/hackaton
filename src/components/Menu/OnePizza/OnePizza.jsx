@@ -12,6 +12,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart"
 import { cartContext } from "../../../Context/CartContextProvider"
 import { IconButton } from "@mui/material"
 import "./OnePizza.css"
+import { Nav } from "react-bootstrap"
 
 export default function OnePizza({ item }) {
 	const { deleteProduct } = useContext(productContext)
@@ -32,6 +33,10 @@ export default function OnePizza({ item }) {
 	let handleChange = (e) => {
 		setNum(e.target.value)
 	}
+
+  function goToCart() {
+    navigate("/cart");
+  }
 
 	return (
 		<Card
@@ -80,37 +85,15 @@ export default function OnePizza({ item }) {
 				</Button>
 			</CardActions>
 			<CardActions className="cart-action2">
-				<div className="counter-unput">
-					<div className="input-group">
-						<div class="input-group-prepend">
-							<button
-								className="btn btn-outline-primary"
-								type="button"
-								onClick={decNum}
-							>
-								-
-							</button>
-						</div>
-						<input
-							type="text"
-							className="form-control"
-							value={num}
-							onChange={handleChange}
-						/>
-						<div className="input-group-prepend">
-							<button
-								className="btn btn-outline-primary"
-								type="button"
-								onClick={incNum}
-							>
-								+
-							</button>
-						</div>
-					</div>
-				</div>
+      <IconButton size="small" onClick={() => addProductToCart(item)}>
+          <ShoppingCartIcon color={checkProductInCart(item.id) ? "primary" : ""} />
+        </IconButton>
+        <Nav.Link
+        onClick={goToCart}>
 				<Button className="buy" variant="outlined">
-					Text
+					BUY
 				</Button>
+        </Nav.Link>
 			</CardActions>
 		</Card>
 	)

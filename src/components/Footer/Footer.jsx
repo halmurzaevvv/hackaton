@@ -7,7 +7,7 @@ const Footer = () => {
 	return (
 		<section className="footer">
 			<Container className="center-footer">
-				<Row className="block-footer">
+				<Row className="block-footer" id="contacts">
 					<h1 className="footer-title footers">Ajdkajdl dkadopk</h1>
 					<h3 className="footer-descr footers">
 						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae
