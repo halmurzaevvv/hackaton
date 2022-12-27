@@ -1,9 +1,29 @@
-.edit-block {
+/* .edit-block {
 	width: 100%;
 	height: 100vh;
-	/* background: url("../../assets/img/background-img.jpg") 0 0 / cover no-repeat; */
+	background: url("../../assets/img/background-img.jpg") 0 0 / cover no-repeat;
 	padding: 150px 0 90px 0;
 	background-position: top center;
 	background-size: cover;
 	background-repeat: no-repeat;
+} */
+
+.edit {
+	width: 100%;
+	height: 100vh;
+	padding: 150px 0 100px 0;
+	/* background-color: wheat; */
+	display: flex;
+	justify-content: center;
+}
+
+.edit-block {
+	background-color: #cccccc;
+	padding: 100px 0 100px 0;
+	width: 80%;
+	border-radius: 2%;
+}
+
+.text-title-edit {
+	color: black;
 }

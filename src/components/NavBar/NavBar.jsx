@@ -1,4 +1,4 @@
-import { Badge, Button, MenuItem, Typography } from "@mui/material";
+import { Badge, Button, } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { Link, NavLink, useNavigate } from "react-router-dom";
@@ -7,40 +7,40 @@ import "./NavBar.css";
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 export const NavBar = () => {
-  const [activeLink, setActiveLink] = useState("home");
-  const [scrolled, setScrolled] = useState(false);
+	const [activeLink, setActiveLink] = useState("home")
+	const [scrolled, setScrolled] = useState(false)
 
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+	const [anchorElNav, setAnchorElNav] = React.useState(null)
+	const [anchorElUser, setAnchorElUser] = React.useState(null)
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
+	const handleOpenNavMenu = (event) => {
+		setAnchorElNav(event.currentTarget)
+	}
+	const handleOpenUserMenu = (event) => {
+		setAnchorElUser(event.currentTarget)
+	}
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
+	const handleCloseNavMenu = () => {
+		setAnchorElNav(null)
+	}
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+	const handleCloseUserMenu = () => {
+		setAnchorElUser(null)
+	}
 
-  useEffect(() => {
-    const onScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
+	useEffect(() => {
+		const onScroll = () => {
+			if (window.scrollY > 50) {
+				setScrolled(true)
+			} else {
+				setScrolled(false)
+			}
+		}
 
-    window.addEventListener("scroll", onScroll);
+		window.addEventListener("scroll", onScroll)
 
-    return () => window.removeEventListener("scroll", onScroll);
-  });
+		return () => window.removeEventListener("scroll", onScroll)
+	})
 
   const pages = [
     { name: "Home", link: "/home", id: 1 },
@@ -52,27 +52,27 @@ export const NavBar = () => {
     { name: "Cart", link: "/cart", id: 7 },
   ];
 
-  const navigate = useNavigate();
+	const navigate = useNavigate()
 
-  function goToMenu() {
-    navigate("/menu");
-  }
+	function goToMenu() {
+		navigate("/menu")
+	}
 
-  function goToMake() {
-    navigate("/make");
-  }
+	function goToMake() {
+		navigate("/make")
+	}
 
-  function goToReviews() {
-    navigate("/reviews");
-  }
+	function goToReviews() {
+		navigate("/reviews")
+	}
 
-  function goToDelivery() {
-    navigate("/delivery");
-  }
+	function goToDelivery() {
+		navigate("/delivery")
+	}
 
-  function goToContacts() {
-    navigate("/contacts");
-  }
+	function goToContacts() {
+		navigate("/contacts")
+	}
 
   function goToCart() {
     navigate("/cart");
@@ -146,3 +146,4 @@ export const NavBar = () => {
     </Navbar>
   );
 };
+	
