@@ -26,6 +26,7 @@ const OrderForm = () => {
   const cartCleaner = () => {
     localStorage.removeItem("cart");
     getCart();
+    alert("Order successfully paid");
   };
 
   const handleDate = (e) => {
