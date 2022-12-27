@@ -33,7 +33,7 @@ const Edit = () => {
 	}
 
 	return (
-		<div>
+		<div className="edit">
 			<Box
 				className="edit-block"
 				component="form"
@@ -43,7 +43,9 @@ const Edit = () => {
 				noValidate
 				autoComplete="off"
 			>
-				<Typography>Edit Product Panel</Typography>
+				<Typography variant="h5" className="text-title-edit">
+					Edit Product Panel
+				</Typography>
 				<TextField
 					value={product.title || ""}
 					onChange={handleInp}
@@ -58,6 +60,14 @@ const Edit = () => {
 					name="img"
 					id="outlined-basic"
 					label="Image"
+					variant="outlined"
+				/>
+				<TextField
+					value={product.desc || ""}
+					onChange={handleInp}
+					name="desc"
+					id="outlined-basic"
+					label="Description"
 					variant="outlined"
 				/>
 				<TextField

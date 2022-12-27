@@ -1,11 +1,15 @@
-import { Box, Button, TextField, Typography } from "@mui/material"
 import React, { useContext, useState } from "react"
-import { useNavigate } from "react-router-dom";
 import { productContext } from "../../../Context/ProductContextProvider"
+import Box from "@mui/material/Box"
+import TextField from "@mui/material/TextField"
+import { Button, Typography } from "@mui/material"
+import { NavLink, useNavigate } from "react-router-dom"
+import { Navbar, Nav } from "react-bootstrap"
+
 import "./Add.css"
 
 const Add = () => {
-	const { addProd } = useContext(productContext)
+	const { addProduct } = useContext(productContext)
 	const navigate = useNavigate()
 
 	const [product, setProduct] = useState({
@@ -28,6 +32,7 @@ const Add = () => {
 	return (
 		<div className="add">
 			<Box
+				className="add-box"
 				component="form"
 				sx={{
 					"& > :not(style)": { m: 1, width: "25ch" },
@@ -35,7 +40,9 @@ const Add = () => {
 				noValidate
 				autoComplete="off"
 			>
-				<Typography>Add Product Panel</Typography>
+				<Typography className="text-title-admin" variant="h5">
+					Add Product Panel
+				</Typography>
 				<TextField
 					onChange={handleInp}
 					name="title"
@@ -48,6 +55,13 @@ const Add = () => {
 					name="img"
 					id="outlined-basic"
 					label="Image"
+					variant="outlined"
+				/>
+				<TextField
+					onChange={handleInp}
+					name="desc"
+					id="outlined-basic"
+					label="Description"
 					variant="outlined"
 				/>
 				<TextField
@@ -66,12 +80,13 @@ const Add = () => {
 				/>
 				<Button
 					onClick={() => {
-						addProd(product)
-						navigate("/products")
+						addProduct(product)
+						navigate("/admin")
 					}}
 					variant="outlined"
 				>
-					Add prod
+					Add Pizza
+					{/* <Nav.Link href="/admin">Add prod</Nav.Link> */}
 				</Button>
 			</Box>
 		</div>

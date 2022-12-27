@@ -1,0 +1,25 @@
+.make {
+	width: 100%;
+
+	/* background: url("../../assets/img/background-img.jpg") 0 0 / cover no-repeat; */
+	padding: 150px 0 90px 0;
+	display: flex;
+	justify-content: center;
+	color: black;
+	font-size: 24px;
+}
+
+.make-block {
+	width: 80%;
+	padding: 40px;
+	background-color: white;
+	border-radius: 50px;
+}
+
+h1 {
+	text-align: center;
+}
+
+p {
+	line-height: 1.4;
+}

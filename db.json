@@ -1,53 +1,107 @@
 {
-	"posts": [
-		{
-			"title": "1233213",
-			"price": 2313,
-			"img": "wqe2",
-			"type": "ewqe",
-			"id": 1
-		},
-		{
-			"title": "13123312",
-			"price": 123,
-			"img": "123",
-			"type": "123",
-			"id": 2
-		},
-		{
-			"title": "13123312",
-			"price": 123,
-			"img": "123",
-			"type": "123",
-			"id": 3
-		},
-		{
-			"title": "ййййййй",
-			"price": 123,
-			"img": "123",
-			"type": "123",
-			"id": 4
-		},
-		{
-			"title": "13123312",
-			"price": 123,
-			"img": "123",
-			"type": "123",
-			"id": 5
-		},
-		{
-			"title": "13123312",
-			"price": 123,
-			"img": "123",
-			"type": "123",
-			"id": 6
-		},
-		{
-			"title": "выфвыфвф",
-			"price": 123,
-			"img": "123",
-			"type": "123",
-			"id": 7
-		}
-	]
+  "posts": [
+    {
+      "title": "Chicken pesto",
+      "price": 580,
+      "img": "https://thumb.tildacdn.com/tild3833-6134-4165-b738-333530623565/-/format/webp/DSC06488.jpg",
+      "desc": "A pizza that is made to resemble the Toasty morning sandwich from Surf Coffee in Krasnaya Polyana....",
+      "type": "With meat",
+      "id": 1
+    },
+    {
+      "title": "Bacon pesto",
+      "price": 570,
+      "img": "https://thumb.tildacdn.com/tild3963-6336-4165-a438-303034646436/-/format/webp/_.jpg",
+      "desc": "One of our favorite combinations, homemade pesto with a very fresh unobtrusive flavor and salty bacon on tomato sauce.",
+      "type": "With meat",
+      "id": 2
+    },
+    {
+      "title": "Parma - Ruccola",
+      "price": 720,
+      "img": "https://thumb.tildacdn.com/tild3732-3562-4633-b632-373562316233/-/format/webp/photo.jpg",
+      "desc": "Another classic combination, cured meats and parmesan arugula.",
+      "type": "With meat",
+      "id": 3
+    },
+    {
+      "title": "Margarita",
+      "price": 550,
+      "img": "https://thumb.tildacdn.com/tild3565-3431-4331-a536-366665393065/-/format/webp/photo.jpg",
+      "desc": "The most traditional of all pizzas, don't know what to get? You can't go wrong with a margarita.",
+      "type": "Vegetrian",
+      "id": 4
+    },
+    {
+      "title": "4 Cheese",
+      "price": 620,
+      "img": "https://thumb.tildacdn.com/tild6562-6465-4239-a361-663863656630/-/format/webp/4_.jpg",
+      "desc": "Classic 4-cheese pizza as interpreted by us",
+      "type": "Vegetrian",
+      "id": 5
+    },
+    {
+      "title": "Pepperoni",
+      "price": 570,
+      "img": "https://thumb.tildacdn.com/tild6639-6237-4362-a639-656239303734/-/format/webp/photo.jpg",
+      "desc": "Fresh mozzarella, pepperoni, tomato sauce, basil",
+      "type": "With meat",
+      "id": 6
+    },
+    {
+      "title": "White Ham",
+      "price": 570,
+      "img": "https://thumb.tildacdn.com/tild3831-6331-4335-b864-386434313761/-/format/webp/DSC07150.jpg",
+      "desc": "Ham mushroom pizza version on sour cream sauce with pesto sauce and mild mozzarella, a new chef's favorite, try it!",
+      "type": "With meat",
+      "id": 7
+    },
+    {
+      "title": "Mushrooms - Béchamel",
+      "price": 570,
+      "img": "https://thumb.tildacdn.com/tild6239-3638-4564-b165-633933303666/-/format/webp/photo.jpg",
+      "desc": "An interesting combination that is not often found, a delicate creamy taste, with a distinct truffle accent.",
+      "id": 8
+    },
+    {
+      "title": "Swernant",
+      "price": 680,
+      "img": "https://thumb.tildacdn.com/tild3539-3737-4266-b462-353839323963/-/format/webp/photo.jpg",
+      "desc": "For meat pizza lovers",
+      "type": "With meat",
+      "id": 9
+    },
+    {
+      "title": "Ham - Sun-dried Tomatoes",
+      "price": 580,
+      "img": "https://thumb.tildacdn.com/tild3737-3338-4734-b435-653138386637/-/format/webp/photo.jpg",
+      "desc": "Sour sweet taste of tomatoes with soft mozzarella and smoked ham",
+      "type": "With meat",
+      "id": 10
+    },
+    {
+      "title": "Vegetarianism",
+      "price": 560,
+      "img": "https://thumb.tildacdn.com/tild6337-3162-4438-b765-333563653237/-/format/webp/photo.jpg",
+      "desc": "Mixed mushrooms and vegetables on Neapolitan pastry.",
+      "type": "Vegetrian",
+      "id": 11
+    },
+    {
+      "title": "Pear - Gorgonzola",
+      "price": 620,
+      "img": "https://thumb.tildacdn.com/tild6533-3237-4061-a662-323563346263/-/format/webp/photo.jpg",
+      "desc": "Tart taste of gorgonzola with spicy sweetness of honey pear on creamy sauce",
+      "type": "With meat",
+      "id": 12
+    },
+    {
+      "title": "Chicken mushroom",
+      "price": 570,
+      "img": "https://thumb.tildacdn.com/tild3437-3864-4933-a338-636534323539/-/format/webp/photo.jpg",
+      "desc": "Neapolitan pastry, sour cream sauce, oyster mushrooms with onions, chicken, mozzarella, dill",
+      "type": "Mushrooms",
+      "id": 13
+    }
+  ]
 }

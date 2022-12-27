@@ -79,8 +79,5 @@ p.danger {
 .App {
 	width: 100%;
 	background: url("./assets/img/banner2.jpg") repeat-y;
-	/* padding: 260px 0 100px 0;
-	background-position: top center;
-	background-size: cover;
-	background-repeat: no-repeat; */
+	/* background-image: url(./assets/img/Clover1.svg); */
 }
