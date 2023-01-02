@@ -5,7 +5,7 @@ import CardMedia from "@mui/material/CardMedia"
 import Button from "@mui/material/Button"
 import Typography from "@mui/material/Typography"
 import { productContext } from "../../../Context/ProductContextProvider"
-import { useContext, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart"
 
@@ -15,28 +15,13 @@ import "./OnePizza.css"
 import { Nav } from "react-bootstrap"
 
 export default function OnePizza({ item }) {
-	const { deleteProduct } = useContext(productContext)
 	const { addProductToCart, checkProductInCart } = useContext(cartContext)
 	const navigate = useNavigate()
 
-	let [num, setNum] = useState(0)
-	let incNum = () => {
-		if (num < 10) {
-			setNum(Number(num) + 1)
-		}
+	console.log(addProductToCart)
+	function goToCart() {
+		navigate("/cart")
 	}
-	let decNum = () => {
-		if (num > 0) {
-			setNum(num - 1)
-		}
-	}
-	let handleChange = (e) => {
-		setNum(e.target.value)
-	}
-
-  function goToCart() {
-    navigate("/cart");
-  }
 
 	return (
 		<Card
@@ -49,7 +34,7 @@ export default function OnePizza({ item }) {
 			<CardMedia
 				className="card-image"
 				component="img"
-				height="130"
+				height="100"
 				image={item.img}
 				alt="Some photo📷"
 			/>
@@ -77,23 +62,25 @@ export default function OnePizza({ item }) {
 				>
 					{item.desc}
 				</Typography>
-				<Typography className="card-price">{item.price}</Typography>
+				<Typography className="card-price">{item.price} c.</Typography>
 			</CardContent>
-			<CardActions className="cart-action1">
-				<Button className="read-more" variant="contained">
-					Read more
-				</Button>
-			</CardActions>
+
 			<CardActions className="cart-action2">
-      <IconButton size="small" onClick={() => addProductToCart(item)}>
-          <ShoppingCartIcon color={checkProductInCart(item.id) ? "primary" : ""} />
-        </IconButton>
-        <Nav.Link
-        onClick={goToCart}>
-				<Button className="buy" variant="outlined">
-					BUY
-				</Button>
-        </Nav.Link>
+				<IconButton
+					variant="outlined"
+					size="small"
+					onClick={() => addProductToCart(item)}
+				>
+					<ShoppingCartIcon
+						className="card-btn"
+						color={checkProductInCart(item.id) ? "primary" : ""}
+					/>
+				</IconButton>
+				<Nav.Link onClick={goToCart}>
+					<Button className="buy-btn" variant="outlined">
+						BUY
+					</Button>
+				</Nav.Link>
 			</CardActions>
 		</Card>
 	)

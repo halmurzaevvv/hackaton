@@ -1,7 +1,7 @@
 {
   "posts": [
     {
-      "title": "Chicken pesto",
+      "title": "Chicken Pesto",
       "price": 580,
       "img": "https://thumb.tildacdn.com/tild3833-6134-4165-b738-333530623565/-/format/webp/DSC06488.jpg",
       "desc": "A pizza that is made to resemble the Toasty morning sandwich from Surf Coffee in Krasnaya Polyana....",
@@ -102,6 +102,22 @@
       "desc": "Neapolitan pastry, sour cream sauce, oyster mushrooms with onions, chicken, mozzarella, dill",
       "type": "Mushrooms",
       "id": 13
+    },
+    {
+      "title": "12",
+      "price": 12,
+      "img": "12",
+      "type": "12",
+      "desc": "12",
+      "id": 14
+    },
+    {
+      "title": "5",
+      "price": 5,
+      "img": "5",
+      "type": "5",
+      "desc": "5",
+      "id": 15
     }
   ]
 }

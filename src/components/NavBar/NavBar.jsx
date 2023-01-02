@@ -42,17 +42,11 @@ export const NavBar = () => {
 		return () => window.removeEventListener("scroll", onScroll)
 	})
 
-	const pages = [
-		{ name: "Home", link: "/home", id: 1 },
-		{ name: "How we make pizza", link: "/make", id: 2 },
-		{ name: "Menu", link: "/menu", id: 3 },
-		{ name: "Reviews", link: "/reviews", id: 4 },
-		{ name: "Delivery", link: "/delivery", id: 5 },
-		{ name: "Contacts", link: "/contacts", id: 6 },
-		{ name: "Cart", link: "/cart", id: 7 },
-	]
-
 	const navigate = useNavigate()
+
+	function goToHome() {
+		navigate("/?q=#home")
+	}
 
 	function goToMenu() {
 		navigate("/menu")
@@ -66,84 +60,10 @@ export const NavBar = () => {
 		navigate("/reviews")
 	}
 
-	// function goToDelivery() {
-	// 	navigate("/delivery")
-	// }
-
 	function goToContacts() {
-		navigate("/contacts")
+		navigate("/?q=#contacts")
 	}
 
-	// <<<<<<< HEAD
-	// 	return (
-	// 		<Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
-	// 			<Container>
-	// 				<Navbar.Brand>
-	// 					<NavLink to="/">
-	// 						<img src={logo} alt="Logo" />
-	// 					</NavLink>
-	// 				</Navbar.Brand>
-	// 				<Navbar.Toggle aria-controls="basic-navbar-nav">
-	// 					<span className="navbar-toggler-icon"></span>
-	// 				</Navbar.Toggle>
-	// 				<Navbar.Collapse id="basic-navbar-nav">
-	// 					<Nav className="me-auto">
-	// 						<Nav.Link
-	// 							onClick={goToMake}
-	// 							className={
-	// 								activeLink === "make" ? "active navbar-link" : "navbar-link"
-	// 							}
-	// 						>
-	// 							How we make pizza
-	// 						</Nav.Link>
-	// 						<NavLink to="/menu"></NavLink>
-	// 						<Nav.Link
-	// 							// to="/menu"
-	// 							// href="/menu"
-	// 							onClick={goToMenu}
-	// 							className={
-	// 								activeLink === "menu" ? "active navbar-link" : "navbar-link"
-	// 							}
-	// 						>
-	// 							Menu
-	// 						</Nav.Link>
-	// 						<Nav.Link
-	// 							onClick={goToReviews}
-	// 							// to="/reviews"
-	// 							// href="#"
-	// 							className={
-	// 								activeLink === "reviews" ? "active navbar-link" : "navbar-link"
-	// 							}
-	// 						>
-	// 							Reviews
-	// 						</Nav.Link>
-	// 						{/* <Nav.Link
-	// 							onClick={goToDelivery}
-	// 							// to="/delivery"
-	// 							// href="#"
-	// 							className={
-	// 								activeLink === "delivery" ? "active navbar-link" : "navbar-link"
-	// 							}
-	// 						>
-	// 							Delivery
-	// 						</Nav.Link> */}
-	// 						<Nav.Link
-	// 							onClick={goToContacts}
-	// 							// to="/contacts"
-	// 							// href="#"
-	// 							className={
-	// 								activeLink === "contacts" ? "active navbar-link" : "navbar-link"
-	// 							}
-	// 						>
-	// 							Contacts
-	// 						</Nav.Link>
-	// 					</Nav>
-	// 				</Navbar.Collapse>
-	// 			</Container>
-	// 		</Navbar>
-	// 	)
-	// }
-	// =======
 	function goToCart() {
 		navigate("/cart")
 	}
@@ -152,9 +72,9 @@ export const NavBar = () => {
 		<Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
 			<Container>
 				<Navbar.Brand>
-					<NavLink to="/">
+					<Nav.Link href="#home" onClick={goToHome}>
 						<img src={logo} alt="Logo" />
-					</NavLink>
+					</Nav.Link>
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav">
 					<span className="navbar-toggler-icon"></span>
@@ -169,7 +89,6 @@ export const NavBar = () => {
 						>
 							How we make pizza
 						</Nav.Link>
-						<NavLink to="/menu"></NavLink>
 						<Nav.Link
 							onClick={goToMenu}
 							className={
@@ -186,24 +105,21 @@ export const NavBar = () => {
 						>
 							Reviews
 						</Nav.Link>
-						{/* <Nav.Link
-							onClick={goToDelivery}
-							className={
-								activeLink === "delivery" ? "active navbar-link" : "navbar-link"
-							}
-						>
-							Delivery
-						</Nav.Link> */}
 						<Nav.Link
 							href="#contacts"
-							// onClick={goToContacts}
+							onClick={goToContacts}
 							className={
 								activeLink === "contacts" ? "active navbar-link" : "navbar-link"
 							}
 						>
 							Contacts
 						</Nav.Link>
-						<Nav.Link onClick={goToCart}>
+						<Nav.Link
+							onClick={goToCart}
+							className={
+								activeLink === "cart" ? "active navbar-link" : "navbar-link"
+							}
+						>
 							<Button sx={{ my: -1, color: "#fff" }}>
 								<Badge>
 									<ShoppingCartIcon />

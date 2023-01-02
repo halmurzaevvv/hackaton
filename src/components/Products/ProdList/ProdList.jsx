@@ -1,22 +1,8 @@
-import {
-	Box,
-	Container,
-	FormControl,
-	FormControlLabel,
-	FormLabel,
-	Grid,
-	InputAdornment,
-	Pagination,
-	Paper,
-	Radio,
-	RadioGroup,
-	TextField,
-} from "@mui/material"
+import { Box, Container, Grid, Pagination } from "@mui/material"
 import React, { useContext, useEffect, useState } from "react"
 import { useSearchParams } from "react-router-dom"
 import { productContext } from "../../../Context/ProductContextProvider"
 import OneProd from "../OneProd/OneProd"
-import SearchIcon from "@mui/icons-material/Search"
 import "./ProdList.css"
 
 const ProdList = () => {
@@ -44,19 +30,18 @@ const ProdList = () => {
 
 	function currentData() {
 		const begin = page - 1
-		const end = begin + 3
+		const end = begin + 9
 		return products.slice(begin, end)
 	}
 
-	// console.log(products);
 	return (
 		<Container className="prod-list">
-			<Box p={5}>
+			<Box p={1}>
 				<Grid container spacing={3}>
 					<Grid
 						item
 						sx={{ justifyContent: "center", display: "flex", flexWrap: "wrap" }}
-						md={9}
+						md={12}
 					>
 						<Box
 							sx={{
@@ -74,64 +59,17 @@ const ProdList = () => {
 								<h2>Loading...</h2>
 							)}
 						</Box>
-						<Pagination
-							count={count}
-							variant="outlined"
-							shape="rounded"
-							onChange={(e, p) => setPage(p)}
-							page={page}
-						/>
-					</Grid>
-					{/* !---------------- FIlTER-------------------- */}
-					<Grid item md={3}>
-						<Paper elevation={5} sx={{ p: 2 }}>
-							<TextField
-								id="input-with-icon-textfield"
-								label="Search..."
-								value={search}
-								onChange={(e) => setSearch(e.target.value)}
-								InputProps={{
-									startAdornment: (
-										<InputAdornment position="start">
-											<SearchIcon />
-										</InputAdornment>
-									),
-								}}
-								variant="standard"
+						<div className="pagination">
+							<Pagination
+								className="pagination1"
+								count={count}
+								variant="outlined"
+								shape="rounded"
+								onChange={(e, p) => setPage(p)}
+								page={page}
 							/>
-							<FormControl>
-								<FormLabel id="demo-radio-buttons-group-label">Type</FormLabel>
-								<RadioGroup
-									aria-labelledby="demo-radio-buttons-group-label"
-									defaultValue="all"
-									name="radio-buttons-group"
-									onChange={(e) => fetchByParams("type", e.target.value)}
-								>
-									<FormControlLabel
-										value="all"
-										control={<Radio />}
-										label="all"
-									/>
-									<FormControlLabel
-										value="With meat"
-										control={<Radio />}
-										label="With meat"
-									/>
-									<FormControlLabel
-										value="Vegetrian"
-										control={<Radio />}
-										label="Vegetrian"
-									/>
-									<FormControlLabel
-										value="Mushrooms"
-										control={<Radio />}
-										label="Mushrooms"
-									/>
-								</RadioGroup>
-							</FormControl>
-						</Paper>
+						</div>
 					</Grid>
-					{/* ------------- FILTER END ----------*/}
 				</Grid>
 			</Box>
 		</Container>

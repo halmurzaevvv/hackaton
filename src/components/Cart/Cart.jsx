@@ -27,7 +27,6 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 	"&:nth-of-type(odd)": {
 		backgroundColor: theme.palette.action.hover,
 	},
-	// hide last border
 	"&:last-child td, &:last-child th": {
 		border: 0,
 	},
@@ -42,11 +41,6 @@ export default function Cart() {
 	}, [])
 
 	const navigate = useNavigate()
-
-	const cartCleaner = () => {
-		localStorage.removeItem("cart")
-		getCart()
-	}
 
 	console.log(cart)
 
@@ -97,10 +91,16 @@ export default function Cart() {
 						</TableRow>
 					))}
 				</TableBody>
+				<Button
+					sx={{
+						margin: "10px",
+					}}
+					variant="outlined"
+					onClick={() => navigate("/order")}
+				>
+					BUY NOW {cart?.totalPrice} $
+				</Button>
 			</Table>
-			<Button onClick={() => navigate("/order")}>
-				BUY NOW {cart?.totalPrice} $
-			</Button>
 		</TableContainer>
 	)
 }

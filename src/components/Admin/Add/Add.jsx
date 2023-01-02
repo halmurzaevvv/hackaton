@@ -5,7 +5,6 @@ import TextField from "@mui/material/TextField"
 import { Button, Typography } from "@mui/material"
 import { NavLink, useNavigate } from "react-router-dom"
 import { Navbar, Nav } from "react-bootstrap"
-
 import "./Add.css"
 
 const Add = () => {
@@ -86,7 +85,6 @@ const Add = () => {
 					variant="outlined"
 				>
 					Add Pizza
-					{/* <Nav.Link href="/admin">Add prod</Nav.Link> */}
 				</Button>
 			</Box>
 		</div>

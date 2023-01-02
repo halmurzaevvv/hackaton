@@ -17,9 +17,9 @@ const PUBLIC_ROUTES = [
   { link: "/edit/:id", element: <Edit />, id: 5 },
   { link: "/cart", element: <Cart />, id: 6 },
   { link: "/menu", element: <MenuList />, id: 7 },
-  { link: "/order", element: <OrderForm />, id: 10 },
   { link: "/reviews", element: <Reviews />, id: 8 },
   { link: "/make", element: <Make />, id: 9 },
+  { link: "/order", element: <OrderForm />, id: 10 },
 ];
 
 const MyRoutes = () => {

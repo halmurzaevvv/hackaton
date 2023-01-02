@@ -21,3 +21,13 @@
 .card-price {
 	font-size: 20px !important;
 }
+
+.cart-action2 {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.buy-btn {
+	border: 1px solid #000;
+}
