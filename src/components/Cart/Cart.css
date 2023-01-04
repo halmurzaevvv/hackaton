@@ -1,19 +1,27 @@
 .cart-block {
-	width: 100%;
-	height: 100vh;
-	background: url("../../assets/img/background-img.jpg") 0 0 / cover no-repeat;
-	padding: 80px 0 90px 0;
-	/* background-position: top center;
+  width: 100%;
+  height: 100vh;
+  background: url("../../assets/img/background-img.jpg") 0 0 / cover no-repeat;
+  padding: 80px 0 90px 0;
+  /* background-position: top center;
 	background-size: cover;
 	background-repeat: no-repeat; */
-	/* display: flex;
+  /* display: flex;
 	justify-content: center; */
 }
 
 .cart-bg {
-	width: 50%;
-	height: 80vh;
-	background-color: white;
-	position: relative;
-	right: -12%;
+  width: 50%;
+  height: 80vh;
+  background-color: white;
+  position: relative;
+  right: -12%;
+  border-radius: 25px;
+}
+
+.buy-now {
+  /* width: 80px; */
+  /* height: 40px; */
+  background-color: rgb(82, 116, 255) !important;
+  border: 1px solid rgb(157, 157, 157) !important;
 }

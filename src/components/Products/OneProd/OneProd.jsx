@@ -9,8 +9,6 @@ import { useContext } from "react"
 import { useNavigate } from "react-router-dom"
 import { cartContext } from "../../../Context/CartContextProvider"
 import { IconButton } from "@mui/material"
-// import ShoppingCartIcon from "@mui/icons-material/ShoppingCart"
-// import {ShoppingCartIcon} from '@mui/icons-material';
 
 export default function OneProd({ item }) {
 	const { deleteProduct } = useContext(productContext)
@@ -49,11 +47,10 @@ export default function OneProd({ item }) {
 				<Button size="small" onClick={() => navigate(`/edit/${item.id}`)}>
 					Edit
 				</Button>
-				<IconButton size="small" onClick={() => addProductToCart(item)}>
-					{/* <ShoppingCartIcon
-						color={checkProductInCart(item.id) ? "primary" : ""}
-					/> */}
-				</IconButton>
+				<IconButton
+					size="small"
+					onClick={() => addProductToCart(item)}
+				></IconButton>
 			</CardActions>
 		</Card>
 	)

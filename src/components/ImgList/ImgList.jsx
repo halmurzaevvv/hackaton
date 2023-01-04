@@ -15,12 +15,7 @@ function srcset(image, size, rows = 1, cols = 1) {
 export default function ImgList() {
 	return (
 		<section className="img-list">
-			<ImageList
-				// sx={{ width: 500, height: 450 }}
-				variant="quilted"
-				cols={4}
-				rowHeight={300}
-			>
+			<ImageList variant="quilted" cols={4} rowHeight={300}>
 				{itemData.map((item) => (
 					<ImageListItem
 						key={item.img}

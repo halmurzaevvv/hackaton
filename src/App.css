@@ -95,6 +95,6 @@ p.danger {
 
 .App {
 	width: 100%;
-	background: url("./assets/img/banner2.jpg") repeat-y;
+	background: url("./assets/img/banner2.jpg");
 	/* background-image: url(./assets/img/Clover1.svg); */
 }

@@ -44,15 +44,11 @@ const Banner = () => {
 		}
 	}
 
-	const pages = [
-		{ name: "Cart", link: "/cart", id: 7 },
-	  ];
+	const navigate = useNavigate()
 
-	  const navigate = useNavigate();
-
-	  function goToMenu() {
-		navigate("/menu");
-	  }
+	function goToMenu() {
+		navigate("/menu")
+	}
 
 	return (
 		<section className="banner" id="home">
@@ -62,7 +58,7 @@ const Banner = () => {
 						<h1>
 							{`Pizzeria Napoletana`}
 							<br />
-							<span className="wrap" style={{ fontSize: "40px" }}>
+							<span className="wrap">
 								{text}
 								<br />
 							</span>

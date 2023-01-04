@@ -27,7 +27,6 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   "&:nth-of-type(odd)": {
     backgroundColor: theme.palette.action.hover,
   },
-  // hide last border
   "&:last-child td, &:last-child th": {
     border: 0,
   },
@@ -43,6 +42,8 @@ export default function Cart() {
 
   const navigate = useNavigate();
 
+  console.log(cart);
+
   return (
     <TableContainer component={Paper} className="cart-block">
       <Table
@@ -50,17 +51,6 @@ export default function Cart() {
         aria-label="customized table"
         className="cart-bg"
       >
-        <TableHead>
-          <TableRow>
-            <StyledTableCell align="right">Image</StyledTableCell>
-            <StyledTableCell align="right">Title</StyledTableCell>
-            <StyledTableCell align="right">Type</StyledTableCell>
-            <StyledTableCell align="right">Price</StyledTableCell>
-            <StyledTableCell align="right">Count</StyledTableCell>
-            <StyledTableCell align="right">SubPrice</StyledTableCell>
-            <StyledTableCell align="right">-</StyledTableCell>
-          </TableRow>
-        </TableHead>
         <TableBody>
           {cart?.products.map((row) => (
             <TableRow key={row.item.id}>
@@ -90,10 +80,16 @@ export default function Cart() {
             </TableRow>
           ))}
         </TableBody>
+        <Button
+          sx={{
+            margin: "10px",
+          }}
+          variant="outlined"
+          onClick={() => navigate("/order")}
+        >
+          BUY {cart?.totalPrice} som
+        </Button>
       </Table>
-      <Button onClick={() => navigate("/order")}>
-        BUY NOW {cart?.totalPrice} $
-      </Button>
     </TableContainer>
   );
 }
