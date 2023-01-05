@@ -13,7 +13,7 @@ const Footer = () => {
 						We love our guests and are always happy to chat, subscribe to our
 						social networks and always stay up to date.
 					</h3>
-					<a href="/">
+					<a href="https://www.instagram.com/halmurzaevvv/">
 						<img
 							className="footer-icon footers"
 							src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"

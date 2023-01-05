@@ -55,13 +55,15 @@ export default function OnePizza({ item }) {
 				>
 					{item.type}
 				</Typography>
-				<Typography
-					variant="body3"
-					className="card-desc"
-					color="text.secondary"
-				>
-					{item.desc}
-				</Typography>
+				<div className="aaa">
+					<Typography
+						variant="body3"
+						className="card-desc"
+						color="text.secondary"
+					>
+						{item.desc}
+					</Typography>
+				</div>
 				<Typography className="card-price">{item.price} c.</Typography>
 			</CardContent>
 
