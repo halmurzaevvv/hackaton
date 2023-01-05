@@ -2,16 +2,15 @@ import React, { useEffect, useState } from "react"
 import { Col, Container, Row } from "react-bootstrap"
 import { ArrowRightCircle } from "react-bootstrap-icons"
 import { useNavigate } from "react-router-dom"
-// import headerImg from "../../assets/img/header-img.svg"
 import "./Banner.css"
 
 const Banner = () => {
-	const [loopNum, setLoopNum] = useState(0)
-	const [isDeleting, setIsDeleting] = useState(false)
 	const toRotate = ["Real Neapolitan pizza", "from the wood oven"]
+	const [isDeleting, setIsDeleting] = useState(false)
+	const [loopNum, setLoopNum] = useState(0)
 	const [text, setText] = useState("")
-	const [delta, setDelta] = useState(200 - Math.random() * 100)
-	const period = 1000
+	const [delta, setDelta] = useState(300 - Math.random() * 100)
+	const period = 800
 
 	useEffect(() => {
 		let ticker = setInterval(() => {
@@ -56,7 +55,7 @@ const Banner = () => {
 				<Row className="align-items-center">
 					<Col xs={12} md={6} xl={7}>
 						<h1>
-							{`Pizzeria Napoletana`}
+							{`Pizzeria Neapoletana`}
 							<br />
 							<span className="wrap">
 								{text}

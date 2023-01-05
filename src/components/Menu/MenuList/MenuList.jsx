@@ -22,11 +22,10 @@ import OnePizza from "../OnePizza/OnePizza"
 
 const MenuList = () => {
 	const { products, getProducts, fetchByParams } = useContext(productContext)
-
 	const [searchParams, setSearchParams] = useSearchParams()
 	const [search, setSearch] = useState(searchParams.get("q") || "")
 	const [page, setPage] = useState(1)
-	const count = Math.ceil(products.length / 3)
+	const count = Math.ceil(products.length / 6)
 
 	useEffect(() => {
 		getProducts()
@@ -108,7 +107,11 @@ const MenuList = () => {
 							name="radio-buttons-group"
 							onChange={(e) => fetchByParams("type", e.target.value)}
 						>
-							<FormControlLabel value="all" control={<Radio />} label="all" />
+							<FormControlLabel
+								value="all"
+								control={<Radio />}
+								label="All 🍕"
+							/>
 							<FormControlLabel
 								value="With meat"
 								control={<Radio />}

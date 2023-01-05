@@ -9,24 +9,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart"
 export const NavBar = () => {
 	const [activeLink, setActiveLink] = useState("home")
 	const [scrolled, setScrolled] = useState(false)
-
-	const [anchorElNav, setAnchorElNav] = React.useState(null)
-	const [anchorElUser, setAnchorElUser] = React.useState(null)
-
-	const handleOpenNavMenu = (event) => {
-		setAnchorElNav(event.currentTarget)
-	}
-	const handleOpenUserMenu = (event) => {
-		setAnchorElUser(event.currentTarget)
-	}
-
-	const handleCloseNavMenu = () => {
-		setAnchorElNav(null)
-	}
-
-	const handleCloseUserMenu = () => {
-		setAnchorElUser(null)
-	}
+	const navigate = useNavigate()
 
 	useEffect(() => {
 		const onScroll = () => {
@@ -42,28 +25,21 @@ export const NavBar = () => {
 		return () => window.removeEventListener("scroll", onScroll)
 	})
 
-	const navigate = useNavigate()
-
 	function goToHome() {
 		navigate("/?q=#home")
 	}
-
 	function goToMenu() {
 		navigate("/menu")
 	}
-
 	function goToMake() {
 		navigate("/make")
 	}
-
 	function goToReviews() {
 		navigate("/reviews")
 	}
-
 	function goToContacts() {
 		navigate("/?q=#contacts")
 	}
-
 	function goToCart() {
 		navigate("/cart")
 	}

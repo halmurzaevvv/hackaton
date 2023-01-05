@@ -7,8 +7,10 @@ const Footer = () => {
 	return (
 		<section className="footer">
 			<Container className="center-footer">
-				<Row className="block-footer" id="contacts">
-					<h1 className="footer-title footers">Contact us</h1>
+				<Row className="block-footer">
+					<h1 className="footer-title footers" id="contacts">
+						Contact us
+					</h1>
 					<h3 className="footer-descr footers">
 						We love our guests and are always happy to chat, subscribe to our
 						social networks and always stay up to date.

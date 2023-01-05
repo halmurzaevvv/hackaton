@@ -2,14 +2,12 @@ import React, { createContext, useReducer } from "react";
 import {
   calcSubPrice,
   calcTotalPrice,
-  getCountProductsInCart,
 } from "../helpers/const";
 
 export const cartContext = createContext();
 
 const INIT_STATE = {
   cart: JSON.parse(localStorage.getItem("cart")),
-  // cartLength: getCountProductsInCart(),
 };
 
 function reducer(state = INIT_STATE, action) {

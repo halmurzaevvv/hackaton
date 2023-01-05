@@ -4,11 +4,9 @@ import CardContent from "@mui/material/CardContent"
 import CardMedia from "@mui/material/CardMedia"
 import Button from "@mui/material/Button"
 import Typography from "@mui/material/Typography"
-import { productContext } from "../../../Context/ProductContextProvider"
-import { useContext, useEffect, useState } from "react"
+import { useContext } from "react"
 import { useNavigate } from "react-router-dom"
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart"
-
 import { cartContext } from "../../../Context/CartContextProvider"
 import { IconButton } from "@mui/material"
 import "./OnePizza.css"
@@ -17,8 +15,6 @@ import { Nav } from "react-bootstrap"
 export default function OnePizza({ item }) {
 	const { addProductToCart, checkProductInCart } = useContext(cartContext)
 	const navigate = useNavigate()
-
-	console.log(addProductToCart)
 	function goToCart() {
 		navigate("/cart")
 	}
