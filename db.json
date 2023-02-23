@@ -1,15 +1,7 @@
 {
   "posts": [
     {
-      "title": "Chicken Pesto",
-      "price": 580,
-      "img": "https://thumb.tildacdn.com/tild3833-6134-4165-b738-333530623565/-/format/webp/DSC06488.jpg",
-      "desc": "A pizza that is made to resemble the Toasty morning sandwich from Surf Coffee in Krasnaya Polyana....",
-      "type": "With meat",
-      "id": 1
-    },
-    {
-      "title": "Bacon pesto",
+      "title": "Bacon pestoooooooo",
       "price": 570,
       "img": "https://thumb.tildacdn.com/tild3963-6336-4165-a438-303034646436/-/format/webp/_.jpg",
       "desc": "One of our favorite combinations, homemade pesto with a very fresh unobtrusive flavor and salty bacon on tomato sauce.",
@@ -110,6 +102,14 @@
       "type": "rtgdfgdf",
       "desc": "dfgdf",
       "id": 14
+    },
+    {
+      "title": "1",
+      "price": 1,
+      "img": "1",
+      "type": "1",
+      "desc": "1",
+      "id": 15
     }
   ]
 }
